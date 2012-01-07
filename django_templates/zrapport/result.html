@@ -1,0 +1,205 @@
+{% extends "zrapport/master.html" %}
+
+{% block title %}Z-rapport {{ report.report_id }}{% endblock %}
+
+{% block secondary_navigation %}
+	{% include "zrapport/_report_navigation.html" %}
+{% endblock %}
+
+{% block content %}
+<h1>Resultat for z-rapport {{ report.report_id }}</h1>
+
+<div id="ReportResult">
+	<h2>Resultat</h2>
+	{% if report.end_datetime %}
+	<p>Denne rapporten ble ferdigstilt {{ report.end_datetime }}</p>
+	{% else %}
+	<form method="post" id="ReportSettleForm">{% csrf_token %}
+		{% if report.wastage_level == 0 %}
+		<p>Du har ingenting svinn, kjempebra!</p>
+		{% endif %}
+		<input type="submit" value="Send inn" />
+	</form>
+	{% endif %}
+	<table>
+		<tbody>
+			<tr>
+				<td colspan="3">Salg</td>
+				<td class="number">{{ report.sale_total }}</td>
+			</tr>
+			<tr>
+				<td colspan="3">Betaling</td>
+				<td class="number">{{ report.payment_total }}</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3">Svinn</td>
+				<td class="number">{{ report.wastage_total }}</td>
+			</tr>
+		</tfoot>
+	</table>
+	
+	<h2>Telling</h2>
+	<table>
+		<thead>
+			<tr>
+				<td class="number">Valutaenhet</td>
+				<td class="number">Oppstart</td>
+				<td class="number">Oppgjør</td>
+				<td class="number">Sum</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="number">0,50</td>
+				<td class="number">{{ report.start_half }}</td>
+				<td class="number">{{ report.end_half }}</td>
+				<td class="number">{{ report.result_half }}</td>
+			</tr>
+			<tr>
+				<td class="number">1</td>
+				<td class="number">{{ report.start_one }}</td>
+				<td class="number">{{ report.end_one }}</td>
+				<td class="number">{{ report.result_one }}</td>
+			</tr>
+			<tr>
+				<td class="number">5</td>
+				<td class="number">{{ report.start_five }}</td>
+				<td class="number">{{ report.end_five }}</td>
+				<td class="number">{{ report.result_five }}</td>
+			</tr>
+			<tr>
+				<td class="number">10</td>
+				<td class="number">{{ report.start_ten }}</td>
+				<td class="number">{{ report.end_ten }}</td>
+				<td class="number">{{ report.result_ten }}</td>
+			</tr>
+			<tr>
+				<td class="number">20</td>
+				<td class="number">{{ report.start_twenty }}</td>
+				<td class="number">{{ report.end_twenty }}</td>
+				<td class="number">{{ report.result_twenty }}</td>
+			</tr>
+			<tr>
+				<td class="number">50</td>
+				<td class="number">{{ report.start_fifty }}</td>
+				<td class="number">{{ report.end_fifty }}</td>
+				<td class="number">{{ report.result_fifty }}</td>
+			</tr>
+			<tr>
+				<td class="number">100</td>
+				<td class="number">{{ report.start_onehundred }}</td>
+				<td class="number">{{ report.end_onehundred }}</td>
+				<td class="number">{{ report.result_onehundred }}</td>
+			</tr>
+			<tr>
+				<td class="number">200</td>
+				<td class="number">{{ report.start_twohundred }}</td>
+				<td class="number">{{ report.end_twohundred }}</td>
+				<td class="number">{{ report.result_twohundred }}</td>
+			</tr>
+			<tr>
+				<td class="number">500</td>
+				<td class="number">{{ report.start_fivehundred }}</td>
+				<td class="number">{{ report.end_fivehundred }}</td>
+				<td class="number">{{ report.result_fivehundred }}</td>
+			</tr>
+			<tr>
+				<td class="number">1000</td>
+				<td class="number">{{ report.start_onethousand }}</td>
+				<td class="number">{{ report.end_onethousand }}</td>
+				<td class="number">{{ report.result_onethousand }}</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3">Resultat - telling</td>
+				<td class="number">{{ report.result_counting }}</td>
+			</tr>
+		</tfoot>
+	</table>
+	
+	<h2>Salg</h2>
+	<table>
+		<thead>
+			<tr>
+				<td colspan="3">Moms</td>
+				<td class="number">Sum</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan="3">Høy</td>
+				<td class="number">{{ report.sale_high_tax }}</td>
+			</tr>
+			<tr>
+				<td colspan="3">Middels</td>
+				<td class="number">{{ report.sale_mid_tax }}</td>
+			</tr>
+			<tr>
+				<td colspan="3">Ingen</td>
+				<td class="number">{{ report.sale_no_tax }}</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3">Totalt</td>
+				<td class="number">{{ report.sale_total }}</td>
+			</tr>
+		</tfoot>
+	</table>
+	
+	<h2>Betaling</h2>
+	<table>
+		<thead>
+			<tr>
+				<td colspan="3">Type betaling</td>
+				<td class="number">Sum</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan="3">Kort</td>
+				<td class="number">{{ report.payment_card }}</td>
+			</tr>
+			<tr>
+				<td colspan="3">Kontant</td>
+				<td class="number">{{ report.payment_cash }}</td>
+			</tr>
+			<tr>
+				<td colspan="3">Verdibong</td>
+				<td class="number">{{ report.payment_bong }}</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3">Totalt</td>
+				<td class="number">{{ report.payment_total }}</td>
+			</tr>
+		</tfoot>
+	</table>
+	
+	<h2>Annet</h2>
+	<table>
+		<thead>
+			<tr>
+				<td colspan="3">Navn</td>
+				<td class="number">Sum</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan="3">Medlemskap solgt i kasse</td>
+				<td class="number">{{ report.other_membership }}</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3">Totalt</td>
+				<td class="number">{{ report.other_total }}</td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+{% endblock %}

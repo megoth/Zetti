@@ -1,0 +1,39 @@
+@mixin table($width: $pageWidth) {
+	width: $width;
+	td {
+		padding: $tableCellPadding;
+		&.number {
+			text-align: right;
+		}
+	}
+	tfoot td,
+	thead td {
+		font-weight: bold;
+	}
+	thead td {
+		background-color: $tableHeadCellBackgroundColor;
+	}
+	tr.separator td {
+		@include table-separator;
+	}
+}
+
+@mixin table-result {
+	td {
+		width: 25%;
+	}
+	tfoot td {
+		background-color: $tableHeadCellBackgroundColor;
+		border-bottom: solid $defaultBorderSize $titleReportBorderColor;
+	}
+	.outer {
+		border-bottom-style: dotted;
+		border-right: solid $defaultBorderSize $tableCellBorderColor;
+		border-top-style: dotted;
+	}
+}
+
+@mixin table-separator {
+	border-top: solid $defaultBorderSize $tableCellBorderColor;
+	font-weight: bold;
+}

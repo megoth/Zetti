@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>{% block title %}My amazing site{% endblock %}</title>
+	<link rel="stylesheet" href="{{ STATIC_URL }}stylesheets/style.css" />
+</head>
+
+<body>
+	<div id="MasterContainer">
+		<nav id="MasterNavigation">
+			<ul>
+				<li>
+				{% if unfinished_report %}
+					<a href="/{{ unfinished_report.id }}">Z-rapport {{ unfinished_report.report_id }}</a>
+				{% else %}
+					<a href="/">Forside</a>
+				{% endif %}
+				</li>
+				<li>
+					<a href="/all">Tidligere rapporter</a>
+				</li>
+				<li>
+					<a href="/settings">Innstillinger</a>
+				</li>
+			</ul>
+		</nav>
+		{% block secondary_navigation %}{% endblock %}
+		<div id="MasterContent">
+			{% block content %}Her er det ikke noe innhold{% endblock %}
+		</div>
+	</div>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.1.min.js"></script>
+	{% block javascript %}{% endblock %}
+</body>
+</html>

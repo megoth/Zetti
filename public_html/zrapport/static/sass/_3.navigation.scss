@@ -1,0 +1,11 @@
+@mixin navigation-primary {
+	ul {
+		@include horizontal-list;
+	}
+}
+
+@mixin navigation-secondary {
+	ul {
+		@include horizontal_list;
+	}
+}

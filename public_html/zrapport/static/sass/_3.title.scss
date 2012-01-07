@@ -1,0 +1,19 @@
+@mixin title {
+	color: $titleColor;
+	font-weight: bold;
+}
+
+@mixin title-header {
+	@include title;
+	font-size: $titleHeaderFontSize;
+}
+
+@mixin title-report {
+	@include title-subheader;
+	margin: 0.5em 0;
+}
+
+@mixin title-subheader {
+	@include title;
+	font-size: $titleSubHeaderFontSize;
+}

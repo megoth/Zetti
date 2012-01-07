@@ -1,0 +1,9 @@
+@mixin block-container {
+	background-image: url('../images/zetti.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	min-width: $logoWidth;
+	padding-top: $logoHeight;
+	width: $pageWidth;
+}

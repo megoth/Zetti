@@ -1,0 +1,22 @@
+{% extends "zrapport/master.html" %}
+
+{% block title %}Zetti{% endblock %}
+
+{% block content %}
+<h1>Velkommen til Zetti</h1>
+<p>Her kan du føre z-rapport for din driftsøkt - være det kafé, fredagspub eller utlån. Ved å følge denne siden tar vi deg gjennom:
+<ol>
+	<li>Oppstart: Telling av kasse</li>
+	<li>Drift underveis: Føring av hvem som jobber, og utdeling av bonger til aktive</li>
+	<li>Avslutting: Dette punktet består av flere underdeler;
+		<ul>
+			<li>Telling av penger: For å se hvor mye penger dere har fått inn</li>
+			<li>Føring av z-rapport: tar deg gjennom skjemaet du fyller for hånd, samt lar deg registrere tallene i det elektroniske systemet</li>
+			<li>Registrering av aktive: Om du ikke allerede har gjort det, har du også her muligheten til å registrere timer og dele ut verdibonger</li>
+		</ul>
+	</li>
+	<li>Tilrettelegging av neste driftsøkt: Helt til slutt teller du over pengene som neste driftsøkt skal starte opp med. Dette gjør at vi får en dobbelttelling, som sikrer oss mot svinn i form av underslag.</li>
+</ol>
+
+<a class="submit" href="/new">Start ny rapport</a>
+{% endblock %}

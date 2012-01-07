@@ -1,0 +1,27 @@
+#ReportNavigation {
+	@include navigation-secondary;
+}
+
+#ReportResult {
+	@include content;
+	h2 {
+		@include title-report;
+	}
+	table {
+		@include table-result;
+	}
+}
+
+#ReportSettleForm {
+	@include form-all-numbers;
+	.counting {
+		@include form-counting;
+	}
+}
+
+#ReportStartForm {
+	@include form-all-numbers;
+	.counting {
+		@include form-counting;
+	}
+}

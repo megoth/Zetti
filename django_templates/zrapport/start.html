@@ -1,0 +1,29 @@
+{% extends "zrapport/master.html" %}
+
+{% block title %}Starte opp z-rapport{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.counting.js"></script>
+<script type="text/javascript">
+	$("#id_report_type_id").counting("#StartForm", "/counting/");
+</script>
+{% endblock %}
+
+{% block secondary_navigation %}
+	{% if report %}
+		{% include "zrapport/_report_navigation.html" %}
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+<h1>Oppstart</h1>
+<form method="post" id="ReportStartForm">{% csrf_token %}
+	<div>
+		{{ form.report_type_id.errors }}
+		<label for="id_report_type_id">Type rapport</label>
+		{{ form.report_type_id }}
+	</div>
+	{% include "zrapport/_counting.html" %}
+	<input type="submit" value="Send inn" />
+</form>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "zrapport/master.html" %}
+
+{% block title %}Oppgjør - Z-rapport {{ report.report_id }}{% endblock %}
+
+{% block secondary_navigation %}
+	{% include "zrapport/_report_navigation.html" %}
+{% endblock %}
+
+{% block content %}
+<h1>Oppgjør</h1>
+<form method="post" id="ReportSettleForm">{% csrf_token %}
+	{% include "zrapport/_counting.html" %}
+	<fieldset>
+		<legend>Salg</legend>
+		<div>
+			{{ form.sale_high_tax.errors }}
+			<label for="id_sale_high_tax">Høy mva</label>
+			{{ form.sale_high_tax }}
+		</div>
+		<div>
+			{{ form.sale_mid_tax.errors }}
+			<label for="id_sale_mid_tax">Middels mva</label>
+			{{ form.sale_mid_tax }}
+		</div>
+		<div>
+			{{ form.sale_no_tax.errors }}
+			<label for="id_sale_no_tax">Null mva</label>
+			{{ form.sale_no_tax }}
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Betaling</legend>
+		<div>
+			{{ form.payment_card.errors }}
+			<label for="id_payment_card">Kort</label>
+			{{ form.payment_card }}
+		</div>
+		<div>
+			{{ form.payment_cash.errors }}
+			<label for="id_payment_cash">Kontant</label>
+			{{ form.payment_cash }}
+		</div>
+		<div>
+			{{ form.payment_bong.errors }}
+			<label for="id_payment_bong">Verdibong</label>
+			{{ form.payment_bong }}
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Annet</legend>
+		<div>
+			{{ form.other_membership.errors }}
+			<label for="id_other_membership">Medlemskap (kr)</label>
+			{{ form.other_membership }}
+		</div>
+	</fieldset>
+	<input type="submit" value="Send inn" />
+</form>
+{% endblock %}

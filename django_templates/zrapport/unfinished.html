@@ -1,0 +1,10 @@
+{% extends "zrapport/master.html" %}
+
+{% block title %}Z-rapport {{ unfinished_report.report_id }} er uferdig{% endblock %}
+
+{% block content %}
+<h1>Uferdig rapport</h1>
+
+<p>Den <a href="/{{ unfinished_report.id }}">uferdige rapporten</a> må fullføres før en ny kan påbegynnes.</p>
+
+{% endblock %}

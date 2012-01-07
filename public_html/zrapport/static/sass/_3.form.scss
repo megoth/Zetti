@@ -1,0 +1,50 @@
+@mixin form {
+	div {
+		@include clearfix;
+		label {
+			float: left;
+			line-height: 1.7em;
+			padding: $formInputPadding;
+			width: $labelWidth;
+		}
+		.errorlist {
+			@include list-error;
+			float: right;
+		}
+	}
+	fieldset {
+		border: solid $defaultBorderSize $fieldsetBorderColor;
+		padding: $fieldsetPadding;
+		legend {
+			padding: $legendPadding;
+		}
+	}
+	input {
+		background-color: $inputBackgroundColor;
+		border: solid $defaultBorderSize $inputBorderColor;
+		color: $inputFontColor;
+		padding: $formInputPadding;
+		text-align: right;
+		&[type="submit"] {
+			@include button_submit;
+		}
+	}
+	select {
+		background-color: $inputBackgroundColor;
+		border: solid $defaultBorderSize $inputBorderColor;
+		color: $inputFontColor;
+		padding: $formInputPadding;
+	}
+}
+
+@mixin form-all-numbers {
+	input {
+		text-align: right;
+	}
+}
+
+@mixin form-counting {
+	label {
+		text-align: right;
+	}
+}

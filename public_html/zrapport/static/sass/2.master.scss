@@ -1,0 +1,11 @@
+#MasterContainer {
+	@include block-container;
+}
+
+#MasterContent {
+	@include content-main
+}
+
+#MasterNavigation {
+	@include navigation-primary;
+}

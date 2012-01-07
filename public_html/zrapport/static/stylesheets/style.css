@@ -1,0 +1,404 @@
+/* Import external sources */
+/* line 17, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Import base values*/
+/* This colors are generated from http://slayeroffice.com/tools/color_palette/?hex=577626 */
+/* Evt #007C3B */
+/* Some basic ratios, based on the musical interval ratios, as explained in http://24ways.org/2011/composing-the-new-canon */
+/* Import values */
+/* Import basic patterns */
+/* Import complex patterns */
+/* Import pages */
+/* line 1, ../sass/2.master.scss */
+#MasterContainer {
+  background-image: url("../images/zetti.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  min-width: 300px;
+  padding-top: 150px;
+  width: 36em;
+}
+
+/* line 10, ../sass/_3.content.scss */
+#MasterContent > h1,
+#MasterContent > h2,
+#MasterContent > h3,
+#MasterContent > h4,
+#MasterContent > h5,
+#MasterContent > h6 {
+  margin-bottom: 0.5em;
+}
+/* line 13, ../sass/_3.content.scss */
+#MasterContent > ol {
+  list-style-type: decimal;
+}
+/* line 15, ../sass/_3.content.scss */
+#MasterContent > ol ol {
+  margin: 0.5em 0 0.5em 1.687em;
+}
+/* line 18, ../sass/_3.content.scss */
+#MasterContent > ol ul {
+  margin: 0.5em 0 0.5em 1.218em;
+}
+/* line 22, ../sass/_3.content.scss */
+#MasterContent > p {
+  margin: 1em 0;
+}
+/* line 25, ../sass/_3.content.scss */
+#MasterContent > ul {
+  list-style-type: square;
+}
+/* line 27, ../sass/_3.content.scss */
+#MasterContent > ul ol {
+  margin: 0.5em 0 0.5em 1.687em;
+}
+/* line 30, ../sass/_3.content.scss */
+#MasterContent > ul ul {
+  margin: 0.5em 0 0.5em 1.218em;
+}
+/* line 42, ../sass/_3.content.scss */
+#MasterContent h1 {
+  color: black;
+  font-weight: bold;
+  font-size: 2em;
+}
+/* line 45, ../sass/_3.content.scss */
+#MasterContent .submit {
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -khtml-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #555555;
+  border: solid 1px black;
+  color: #d4d4d4;
+  display: block;
+  font-weight: bold;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+}
+/* line 15, ../sass/_3.button.scss */
+#MasterContent .submit:hover {
+  background: #6e6e6e;
+  -moz-box-shadow: inset 0 0 1em #151515;
+  -webkit-box-shadow: inset 0 0 1em #151515;
+  box-shadow: inset 0 0 1em #151515;
+}
+
+/* line 2, ../sass/_3.navigation.scss */
+#MasterNavigation ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 60, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#MasterNavigation ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 48, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#MasterNavigation ul li:first-child, #MasterNavigation ul li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#MasterNavigation ul li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#MasterNavigation ul li.last {
+  padding-right: 0;
+}
+
+/* line 8, ../sass/_3.navigation.scss */
+#ReportNavigation ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 60, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#ReportNavigation ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 48, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#ReportNavigation ul li:first-child, #ReportNavigation ul li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#ReportNavigation ul li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../../../../var/lib/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#ReportNavigation ul li.last {
+  padding-right: 0;
+}
+
+/* line 10, ../sass/_3.content.scss */
+#ReportResult > h1, #ReportResult > h2, #ReportResult > h3, #ReportResult > h4, #ReportResult > h5, #ReportResult > h6 {
+  margin-bottom: 0.5em;
+}
+/* line 13, ../sass/_3.content.scss */
+#ReportResult > ol {
+  list-style-type: decimal;
+}
+/* line 15, ../sass/_3.content.scss */
+#ReportResult > ol ol {
+  margin: 0.5em 0 0.5em 1.687em;
+}
+/* line 18, ../sass/_3.content.scss */
+#ReportResult > ol ul {
+  margin: 0.5em 0 0.5em 1.218em;
+}
+/* line 22, ../sass/_3.content.scss */
+#ReportResult > p {
+  margin: 1em 0;
+}
+/* line 25, ../sass/_3.content.scss */
+#ReportResult > ul {
+  list-style-type: square;
+}
+/* line 27, ../sass/_3.content.scss */
+#ReportResult > ul ol {
+  margin: 0.5em 0 0.5em 1.687em;
+}
+/* line 30, ../sass/_3.content.scss */
+#ReportResult > ul ul {
+  margin: 0.5em 0 0.5em 1.218em;
+}
+/* line 7, ../sass/2.report.scss */
+#ReportResult h2 {
+  color: black;
+  font-weight: bold;
+  font-size: 1.6em;
+  margin: 0.5em 0;
+}
+/* line 22, ../sass/_3.table.scss */
+#ReportResult table td {
+  width: 25%;
+}
+/* line 25, ../sass/_3.table.scss */
+#ReportResult table tfoot td {
+  background-color: #d4d4d4;
+  border-bottom: solid 1px black;
+}
+/* line 29, ../sass/_3.table.scss */
+#ReportResult table .outer {
+  border-bottom-style: dotted;
+  border-right: solid 1px black;
+  border-top-style: dotted;
+}
+
+/* line 41, ../sass/_3.form.scss */
+#ReportSettleForm input {
+  text-align: right;
+}
+/* line 47, ../sass/_3.form.scss */
+#ReportSettleForm .counting label {
+  text-align: right;
+}
+
+/* line 41, ../sass/_3.form.scss */
+#ReportStartForm input {
+  text-align: right;
+}
+/* line 47, ../sass/_3.form.scss */
+#ReportStartForm .counting label {
+  text-align: right;
+}
+
+/* line 1, ../sass/2.tag.scss */
+html {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #d4d4d4)), #d4d4d4;
+  background: -webkit-linear-gradient(top, #ffffff, #d4d4d4), #d4d4d4;
+  background: -moz-linear-gradient(top, #ffffff, #d4d4d4), #d4d4d4;
+  background: -o-linear-gradient(top, #ffffff, #d4d4d4), #d4d4d4;
+  background: -ms-linear-gradient(top, #ffffff, #d4d4d4), #d4d4d4;
+  background: linear-gradient(top, #ffffff, #d4d4d4), #d4d4d4;
+  color: black;
+  font-family: 'Verdana';
+  font-size: 0.937em;
+  min-height: 100%;
+}
+
+/* line 2, ../sass/_3.form.scss */
+form div {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 4, ../sass/_3.form.scss */
+form div label {
+  float: left;
+  line-height: 1.7em;
+  padding: 0 0.35em;
+  width: 10em;
+}
+/* line 10, ../sass/_3.form.scss */
+form div .errorlist {
+  border: solid 1px red;
+  float: right;
+}
+/* line 3, ../sass/_3.list.scss */
+form div .errorlist li {
+  padding: 0.5em;
+}
+/* line 15, ../sass/_3.form.scss */
+form fieldset {
+  border: solid 1px black;
+  padding: 0.25em 1em 1em;
+}
+/* line 18, ../sass/_3.form.scss */
+form fieldset legend {
+  padding: 0.5em;
+}
+/* line 22, ../sass/_3.form.scss */
+form input {
+  background-color: white;
+  border: solid 1px #151515;
+  color: black;
+  padding: 0 0.35em;
+  text-align: right;
+}
+/* line 28, ../sass/_3.form.scss */
+form input[type="submit"] {
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -khtml-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #555555;
+  border: solid 1px black;
+  color: #d4d4d4;
+  display: block;
+  font-weight: bold;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+}
+/* line 15, ../sass/_3.button.scss */
+form input[type="submit"]:hover {
+  background: #6e6e6e;
+  -moz-box-shadow: inset 0 0 1em #151515;
+  -webkit-box-shadow: inset 0 0 1em #151515;
+  box-shadow: inset 0 0 1em #151515;
+}
+/* line 32, ../sass/_3.form.scss */
+form select {
+  background-color: white;
+  border: solid 1px #151515;
+  color: black;
+  padding: 0 0.35em;
+}
+
+/* line 16, ../sass/2.tag.scss */
+table {
+  width: 36em;
+}
+/* line 3, ../sass/_3.table.scss */
+table td {
+  padding: 0.35em;
+}
+/* line 5, ../sass/_3.table.scss */
+table td.number {
+  text-align: right;
+}
+/* line 10, ../sass/_3.table.scss */
+table tfoot td,
+table thead td {
+  font-weight: bold;
+}
+/* line 13, ../sass/_3.table.scss */
+table thead td {
+  background-color: #d4d4d4;
+}
+/* line 16, ../sass/_3.table.scss */
+table tr.separator td {
+  border-top: solid 1px black;
+  font-weight: bold;
+}

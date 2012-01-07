@@ -1,0 +1,6 @@
+@mixin list-error {
+	border: solid $defaultBorderSize $errorColor;
+	li {
+		padding: 0.5em;
+	}
+}

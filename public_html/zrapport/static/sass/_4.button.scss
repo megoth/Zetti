@@ -1,0 +1,18 @@
+@mixin button_submit {
+	@include border-radius(0.5em);
+	@include background(linear-gradient(top left, $buttonSubmitLightColor, $buttonSubmitDarkColor),
+		$buttonSubmitDarkColor);
+	color: $base-light-color;
+	display: block;
+	font-weight: bold;
+	margin: 1em 0;
+	padding: 0.5em 1em;
+	text: {
+		align: center;
+		decoration: none;
+	}
+	width: auto;
+	&:hover {
+		@include box-shadow-inset($buttonSubmitShadowColor, 0, 0, 1em);
+	}
+}

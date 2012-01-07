@@ -1,0 +1,18 @@
+html {
+	@include background(linear-gradient(top, $pageLightBackgroundColor, $pageDarkBackgroundColor),
+		$pageDarkBackgroundColor);
+	color: $pageFontColor;
+	font: {
+		family: 'Verdana';
+		size: $defaultFontSize;
+	}
+	min-height: 100%;
+}
+
+form {
+	@include form;
+}
+
+table {
+	@include table;
+}

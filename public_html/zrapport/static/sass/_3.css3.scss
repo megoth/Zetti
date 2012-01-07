@@ -1,0 +1,13 @@
+@import "compass/css3";
+
+@mixin box-shadow($color: #888, $hoff: 10px, $voff: 10px, $blur: 5px) {
+	-moz-box-shadow: $hoff $voff $blur $color;
+	-webkit-box-shadow: $hoff $voff $blur $color;
+	box-shadow: $hoff $voff $blur $color;
+}
+
+@mixin box-shadow-inset($color: #888, $hoff: 10px, $voff: 10px, $blur: 5px) {
+	-moz-box-shadow: inset $hoff $voff $blur $color;
+	-webkit-box-shadow: inset  $hoff $voff $blur $color;
+	box-shadow: inset  $hoff $voff $blur $color;
+}

@@ -1,0 +1,14 @@
+/* This colors are generated from http://slayeroffice.com/tools/color_palette/?hex=577626 */
+
+$base-L0: #555; /* Evt #007C3B */;
+$base-L1: lighten($base-L0, 10%);
+$base-L2: lighten($base-L0, 25%);
+$base-L3: lighten($base-L0, 50%);
+$base-L4: lighten($base-L0, 75%);
+$base-D0: darken($base-L0, 15%);
+$base-D1: darken($base-D0, 10%);
+$base-D2: darken($base-D0, 25%);
+$base-D3: darken($base-D0, 50%);
+$base-D4: darken($base-D0, 75%);
+
+$warning-L0: #ff0000;
